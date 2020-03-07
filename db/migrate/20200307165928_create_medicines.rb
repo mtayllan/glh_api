@@ -3,7 +3,7 @@ class CreateMedicines < ActiveRecord::Migration[6.0]
     create_table :medicines do |t|
       t.string :name
       t.text :composition, array: true
-      t.string :descriptiont
+      t.text :description, array: true
       t.integer :group
 
       t.timestamps

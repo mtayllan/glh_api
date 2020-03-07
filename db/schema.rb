@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2020_03_07_171930) do
   create_table "medicines", force: :cascade do |t|
     t.string "name"
     t.text "composition", array: true
-    t.string "descriptiont"
+    t.text "description", array: true
     t.integer "group"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -61,6 +61,8 @@ ActiveRecord::Schema.define(version: 2020_03_07_171930) do
     t.string "state"
     t.string "number"
     t.string "complement"
+    t.string "nacionality"
+    t.string "civil_status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

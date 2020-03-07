@@ -46,6 +46,6 @@ class Api::V1::MedicinesController < Api::V1Controller
 
     # Only allow a trusted parameter "white list" through.
     def medicine_params
-      params.require(:medicine).permit(:name, :composition, :description, :group)
+      params.require(:medicine).permit(:name, :group, composition: [], description: [])
     end
 end
