@@ -1,5 +1,5 @@
 class Api::V1::DefensesController < Api::V1Controller
-  before_action :set_defense, only: [:show, :update, :destroy]
+  before_action :set_defense, only: [:show]
 
   # GET /defenses
   def index
@@ -11,31 +11,6 @@ class Api::V1::DefensesController < Api::V1Controller
   # GET /defenses/1
   def show
     render json: @defense
-  end
-
-  # POST /defenses
-  def create
-    @defense = Defense.new(defense_params)
-
-    if @defense.save
-      render json: @defense, status: :created, location: @defense
-    else
-      render json: @defense.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /defenses/1
-  def update
-    if @defense.update(defense_params)
-      render json: @defense
-    else
-      render json: @defense.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /defenses/1
-  def destroy
-    @defense.destroy
   end
 
   private

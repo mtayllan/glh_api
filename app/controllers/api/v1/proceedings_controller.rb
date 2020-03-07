@@ -46,6 +46,6 @@ class Api::V1::ProceedingsController < Api::V1Controller
 
     # Only allow a trusted parameter "white list" through.
     def proceeding_params
-      params.require(:proceeding).permit(:patient_id, :medication_id)
+      params.require(:proceeding).permit(:patient_id, :medication_id, :document)
     end
 end
