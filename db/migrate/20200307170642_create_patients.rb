@@ -11,6 +11,8 @@ class CreatePatients < ActiveRecord::Migration[6.0]
       t.string :state
       t.string :number
       t.string :complement
+      t.string :nacionality
+      t.string :civil_status
 
       t.timestamps
     end
