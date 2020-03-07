@@ -16,3 +16,6 @@ end
 
 require_relative 'seed_data'
 Medicine.create!(medicines_seed)
+
+
+User.create!(name: 'Admin', email: 'test@test.com', password: '123456')
